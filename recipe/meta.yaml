@@ -10,24 +10,34 @@ source:
 
 build:
   noarch: python
-  number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  entry_points:
+    - htmlmin = htmlmin.command:main
 
 requirements:
   build:
-    - python
     - pip
+    - python
+    - setuptools
   run:
     - python
 
 test:
   imports:
     - htmlmin
+  commands:
+    - htmlmin --help
 
 about:
   home: https://htmlmin.readthedocs.org/en/latest/
+  dev_url: https://github.com/mankyd/htmlmin/
+  doc_url: https://htmlmin.readthedocs.org/en/latest/
   license: BSD 3-Clause
-  summary: 'A configurable HTML Minifier with safety features'
+  license_family: BSD
+  license_file: LICENSE
+  summary: A configurable HTML Minifier with safety features
+  description: A configurable HTML Minifier with safety features
 
 extra:
   recipe-maintainers:
