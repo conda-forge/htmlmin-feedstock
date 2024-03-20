@@ -21,7 +21,9 @@ requirements:
     - python
     - setuptools
   run:
-    - python
+    - python>=3.6
+  host:
+    - python>=3.6
 
 test:
   imports:
