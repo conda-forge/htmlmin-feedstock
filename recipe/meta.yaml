@@ -33,7 +33,7 @@ about:
   home: https://htmlmin.readthedocs.org/en/latest/
   dev_url: https://github.com/mankyd/htmlmin/
   doc_url: https://htmlmin.readthedocs.org/en/latest/
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: A configurable HTML Minifier with safety features
