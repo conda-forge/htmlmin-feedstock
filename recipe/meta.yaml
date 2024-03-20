@@ -16,10 +16,11 @@ build:
     - htmlmin = htmlmin.command:main
 
 requirements:
-  build:
+  host:
     - pip
     - python
     - setuptools
+    - python >=3.6
   run:
     - python >=3.6
 
